@@ -1,15 +1,15 @@
 import {
   Links,
   Meta,
-  Outlet,
   Scripts,
   ScrollRestoration,
   LiveReload,
+  Outlet
 } from "@remix-run/react";
 import type { LinksFunction } from "@remix-run/node";
 
 import "./tailwind.css";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/User/Navbar";
 
 export const links: LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -33,9 +33,9 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className="">
+      <body className="m-0 p-0">
         <Navbar />
-        <main className="container mx-auto bg-white p-4">
+        <main className="container mx-auto">
           <Outlet />
         </main>
         <ScrollRestoration />
