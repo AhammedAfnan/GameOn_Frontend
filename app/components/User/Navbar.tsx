@@ -2,7 +2,7 @@ import { Link } from "@remix-run/react"
 
 const Navbar: React.FC = () => {
   return (
-    <nav className="bg-black/50 border-b text-white border-gray-300 p-5 shadow-md flex justify-around items-center fixed top-0 w-full z-50 backdrop:blur-md">
+    <nav className="bg-black/50 text-white p-5 flex justify-around items-center fixed top-0 w-full z-50 backdrop:blur-md">
         <div className="text-xl font-bold">Game On</div>
         <ul className="hidden md:flex space-x-6 text-white">
             <li>

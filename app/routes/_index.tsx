@@ -11,11 +11,10 @@ export const meta: MetaFunction = () => {
   ];
 };
 
-export default function Index() {
+export default function Home() {
   return (
     <div>
       <Banner />
-      <div>Find your favorite club</div>
     </div>
   );
 }

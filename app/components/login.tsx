@@ -1,17 +1,10 @@
 import { useState } from "react";
-import { useNavigate } from "@remix-run/react";
 
-// interface LoginProps {
-//   type: "user" | "club";
-// }
-
-const Login: React.FC = ({  }) => {
-  const navigate = useNavigate();
+const Login: React.FC = () => {
   const [ isUser, setIsUser ] = useState(true)
 
   const handleClick =  (user: boolean) => {
     setIsUser(user)
-    navigate(user ? "/login" : "/login/club")
   }
   
   return (
@@ -22,10 +15,6 @@ const Login: React.FC = ({  }) => {
       }}
     >
       <div className="w-11/12 max-w-4xl bg-white rounded-lg shadow-md flex overflow-hidden">
-        <div
-          className="w-1/2 hidden md:block bg-cover bg-center"
-          style={{ backgroundImage: "url('/images/ftbl2.jpg')" }}
-        ></div>
 
         <div className="w-full md:w-1/2 p-8">
           {/* User/Club Toggle */}
@@ -112,7 +101,7 @@ const Login: React.FC = ({  }) => {
 
           <p className="text-center text-gray-600 mt-4">
             Not a member?{" "}
-            <a href="" className="text-blue-500 font-medium hover:underline">
+            <a href="/signup" className="text-blue-500 font-medium hover:underline">
               Join now
             </a>
           </p>
